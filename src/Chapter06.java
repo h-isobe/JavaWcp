@@ -10,7 +10,7 @@ public class Chapter06 {
     	val *= 5;
     	System.out.println(val);
     	
-    	boolean bool = val == 50;
+    	boolean bool = (val == 50);
     	System.out.println(bool);
     	
     	bool = (val < 50) && (val % 10 == 0);
