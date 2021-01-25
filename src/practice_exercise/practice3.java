@@ -77,7 +77,7 @@ public class practice3 {
     		System.out.println("不可");
     	}
     	
-    	//3-6
+    	//3-6 2つのテストの点数
     	int test1 = 10;
     	int test2 = 90;
     	if (test1 >= 60 && test2 >= 60) {
@@ -94,8 +94,8 @@ public class practice3 {
     	//day  = {"0=日曜", "1=月曜", "2=火曜", "3=水曜", "4=木曜", "5=金曜", "6=土曜};
     	//zone = {"0=午前", "1=午後", "2=夜間"};
     	
-    	int day = 3;
-    	int zone = 1;
+    	int day = 6;
+    	int zone = 2;
     	boolean bool = true;
     	
     	if (day == 0) {
@@ -113,5 +113,19 @@ public class practice3 {
     		System.out.println("休診日です");
     	}
     	
+    	//3-8
+    	int x = 101;
+    	int y = 100;
+    	if ((x < y) && (x % 2 == 0 && y % 2 == 0)) {
+    		System.out.println("xはyより小さく、かつ、xとyは共に偶数である。");
+    	} else if ((x == y) && (x <= 0 && y <= 0)) {
+    		System.out.println("xとyは等しく、かつ、負の数である。");
+    	} else if ((x < y) || (x % 2 == 0)) {
+    		System.out.println("xはyより小さい、または、xは偶数である。");
+    	} else if ((x <= 10 || x >= 100) && (y >= 10 && y <= 100)) {
+    		System.out.println("xは10以下または100以上で、かつ、yは10以上かつ100以下である。");
+    	} else {
+    		System.out.println("xもyも負の数である、ではない。");
+    	}
     }
 }
