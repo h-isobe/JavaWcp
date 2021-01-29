@@ -31,6 +31,7 @@ public class practice4 {
 
 
     	//4-5 平均値
+    	System.out.println("平均値を求めます。");
     	int sum = 0;
     	for (int i = 1; i <= 10; i++) {
     		Scanner sc = new Scanner(System.in);
@@ -41,6 +42,8 @@ public class practice4 {
 
 
     	//4-6
+    	System.out.println("勝ち負けの回数。");
+    	System.out.println("1:勝ち, 2:負けで入力。");
     	int win = 0;
     	for (int i = 1; i <= 10; i++) {
     		Scanner sc = new Scanner(System.in);
@@ -77,6 +80,7 @@ public class practice4 {
 
 
     	//4-8 最大値
+    	System.out.println("自然数を10回入力して最大値を求める。");
     	int max_num = 0;
     	for (int i = 1; i <= 10; i++) {
     		Scanner sc = new Scanner(System.in);
@@ -87,6 +91,32 @@ public class practice4 {
     		System.out.println(max_num);
     	}
 
+    	
+    	//4-9
+    	System.out.println("個数を数値入力して、個数分だけ‘*’を出力。");
+    	Scanner sc = new Scanner(System.in);
+    	int count = sc.nextInt();
+    	for (int i = 0; i < count; i++) {
+    		System.out.println("‘*’");
+    	}
+    	
+    	
+    	//4-10
+    	System.out.println("個数を数値入力して、個数文だけ0~9を表示。9の次は0に戻る。");
+        Scanner sc2 = new Scanner(System.in);
+        int count2 = sc2.nextInt();
+        for (int i = 1; i < count2; i++) {
+        	System.out.println( i % 10 );
+        }
+        
+        
+        //4-11
+        int sum2 = 0;
+        while (sum2 <= 100) {
+        	Scanner sc3 = new Scanner(System.in);
+        	sum2 += sc3.nextInt();
+        }
+        System.out.println("合計は" + sum2);
 
     }
 }
