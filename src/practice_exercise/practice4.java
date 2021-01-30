@@ -43,7 +43,7 @@ public class practice4 {
 
     	//4-6
     	System.out.println("勝ち負けの回数。");
-    	System.out.println("1:勝ち, 2:負けで入力。");
+    	System.out.println("1:勝ち, 0:負けで入力。");
     	int win = 0;
     	for (int i = 1; i <= 10; i++) {
     		Scanner sc = new Scanner(System.in);
@@ -91,7 +91,7 @@ public class practice4 {
     		System.out.println(max_num);
     	}
 
-    	
+
     	//4-9
     	System.out.println("個数を数値入力して、個数分だけ‘*’を出力。");
     	Scanner sc = new Scanner(System.in);
@@ -99,8 +99,8 @@ public class practice4 {
     	for (int i = 0; i < count; i++) {
     		System.out.println("‘*’");
     	}
-    	
-    	
+
+
     	//4-10
     	System.out.println("個数を数値入力して、個数文だけ0~9を表示。9の次は0に戻る。");
         Scanner sc2 = new Scanner(System.in);
@@ -108,9 +108,10 @@ public class practice4 {
         for (int i = 1; i < count2; i++) {
         	System.out.println( i % 10 );
         }
-        
-        
+
+
         //4-11
+        System.out.println("数値を繰り返し入力して、100を超えたら合計を表示する。");
         int sum2 = 0;
         while (sum2 <= 100) {
         	Scanner sc3 = new Scanner(System.in);
@@ -118,5 +119,62 @@ public class practice4 {
         }
         System.out.println("合計は" + sum2);
 
+
+        //4-12
+        System.out.println("ストライクカウントを数える。");
+        int strike = 0;
+        int ball = 0;
+        while (strike < 3 && ball < 4) {
+        	System.out.println("ストライク=1 or ボール=2 ？");
+        	Scanner sc4 = new Scanner(System.in);
+        	int judge = sc4.nextInt();
+        	if (judge == 1) {
+        		strike++;
+        	} else if (judge == 2) {
+        		ball++;
+        	}
+        }
+        System.out.println("ストライク" + strike + "個" + "ボール" + ball + "個");
+
+
+        //4-13
+        System.out.println("---------------------------------------");
+        System.out.println("ストライクカウントを数える 問題2。");
+        System.out.println("2ストライク以降のストライクやファウルはカウントしない。");
+        int strike2 = 0;
+        int ball2 = 0;
+        while (strike2 < 3 && ball2 < 4) {
+        	System.out.println("ストライク=1 or ボール=2 or ファウル=3");
+        	Scanner sc5 = new Scanner(System.in);
+        	int judge2 = sc5.nextInt();
+        	if (judge2 == 1) {
+        		strike2++;
+        	} else if (judge2 == 2) {
+        		ball2++;
+        	} else if (judge2 == 3 && strike2 < 2) {
+        		strike2++;
+        	}
+        	System.out.println(strike2 + "ストライク" + "," + ball2 + "ボール");
+        }
+
+
+        //4-14
+        System.out.println("------------");
+        System.out.println("素数の判定");
+        Scanner sc6 = new Scanner(System.in);
+        int num = sc6.nextInt();
+
+        if (num < 2) {
+        	System.out.println("素数ではありません");
+        	return;
+        }
+
+        for (int i = 2; i < num; i++) {
+        	if (num % i == 0) {
+        		System.out.println("素数ではありません");
+        		return;
+        	}
+        }
+        System.out.println("素数です");
     }
 }
