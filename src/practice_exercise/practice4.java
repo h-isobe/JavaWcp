@@ -176,5 +176,32 @@ public class practice4 {
         	}
         }
         System.out.println("素数です");
+
+
+        //4-15
+    	System.out.println("---------------");
+        System.out.println("九九の計算");
+        for (int kakeru = 1; kakeru <= 9; kakeru++) {
+        	for (int kakeru2 = 1; kakeru2 <= 9; kakeru2++ ) {
+        		System.out.println(kakeru * kakeru2);
+        	}
+        }
+
+
+        //4-16
+        System.out.println("----------------------");
+        System.out.println("数値を繰り返し入力して0が出るまで合計する。");
+        Scanner sc7 = new Scanner(System.in);
+        int sum3 = 0;
+        while (true) {
+        	System.out.println("数字を繰り返し入力。0がでたら終了。");
+        	int n = sc7.nextInt();
+        	if (n == 0) {
+        		break;
+        	} else {
+        		sum3 += n;
+        	}
+        }
+        System.out.println("合計" + sum3);
     }
 }
