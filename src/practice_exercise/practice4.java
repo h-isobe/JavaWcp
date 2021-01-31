@@ -88,7 +88,7 @@ public class practice4 {
     		if (num > max_num) {
     			max_num = num;
     		}
-    		System.out.println(max_num);
+    		System.out.println("最大値は" + max_num);
     	}
 
 
@@ -194,7 +194,7 @@ public class practice4 {
         Scanner sc7 = new Scanner(System.in);
         int sum3 = 0;
         while (true) {
-        	System.out.println("数字を繰り返し入力。0がでたら終了。");
+        	System.out.println("数値を繰り返し入力。0がでたら終了。");
         	int n = sc7.nextInt();
         	if (n == 0) {
         		break;
@@ -203,5 +203,24 @@ public class practice4 {
         	}
         }
         System.out.println("合計" + sum3);
+
+
+        //4-17
+        System.out.println("----------------------");
+        System.out.println("数値を入力して0がでたら入力をやめて平均値を出す。");
+        Scanner sc8 = new Scanner(System.in);
+        int sum4 = 0;
+        int count3 = 0;
+        while (true) {
+        	System.out.println("数値を繰り返し入力。0がでたら終了。");
+        	int n1 = sc8.nextInt();
+        	if (n1 == 0) {
+        		break;
+        	} else {
+        		sum4 += n1;
+        		count3++;
+        	}
+        }
+        System.out.println("平均" + sum4 / count3);
     }
 }
