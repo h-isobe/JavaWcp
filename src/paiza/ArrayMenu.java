@@ -22,5 +22,8 @@ public class ArrayMenu {
         System.out.println("5 1 3 4 5 12 6 8 1 3");
         int array3[] = {5, 1, 3, 4, 5, 12, 6, 8, 1, 3};
         System.out.println(array3[3]);
+
+
+        //STEP: 4
     }
 }
