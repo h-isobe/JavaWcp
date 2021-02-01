@@ -24,6 +24,5 @@ public class ArrayMenu {
         System.out.println(array3[3]);
 
 
-        //STEP: 4
     }
 }
