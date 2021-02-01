@@ -2,7 +2,7 @@ package practice_exercise;
 
 import java.util.Scanner;
 
-public class practice4 {
+public class Practice4 {
     public static void main(String[] args) {
     	//4-1
     	for (int i = 1; i <= 10; i++) {
@@ -222,5 +222,15 @@ public class practice4 {
         	}
         }
         System.out.println("平均" + sum4 / count3);
+
+
+        //4-18
+        System.out.println("----------------------");
+
+
+        //4-19
+
+
+        //4-20
     }
 }

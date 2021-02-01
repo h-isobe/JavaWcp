@@ -1,6 +1,6 @@
 package practice_exercise;
 
-public class practice1 {
+public class Practice1 {
 	public static void main(String[] args) {
 		//1-1
 		System.out.println("Hello World");
@@ -65,7 +65,9 @@ public class practice1 {
 		p--;
 		p--;
 		System.out.println(p);
+		
 	}
+	
 }
 
 

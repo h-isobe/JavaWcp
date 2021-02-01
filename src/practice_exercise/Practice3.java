@@ -1,6 +1,6 @@
 package practice_exercise;
 
-public class practice3 {
+public class Practice3 {
     public static void main(String[] args) {
     	//3-1
     	int a = 3;
@@ -189,7 +189,7 @@ public class practice3 {
     	
     	//3-11
     	System.out.println("月の日数を表示");
-    	int month_days = 13;
+    	int month_days = 10;
         
     	switch (month_days) {
     	    case 2:
