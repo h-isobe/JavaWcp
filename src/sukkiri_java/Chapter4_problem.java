@@ -86,6 +86,36 @@ public class Chapter4_problem {
 		System.out.println(scores6[0].length);  //3が出力
 
 
+		//練習問題 4-1
+		int[] points = new int[4];
+		double[] weights = new double[5];
+		boolean[] answers = new boolean[3];
+		String[] names = new String[3];
+
+
+		//練習問題 4-2
+		int[] moneyList = {121902, 8302, 55100};
+
+		//通常for文
+		for (int i = 0; i < moneyList.length; i++) {
+			System.out.println(moneyList[i]);
+		}
+		//拡張for文
+		for (int money: moneyList) {
+			System.out.println(money);
+		}
+
+
+		//練習問題 4-4
+		int[] numbers = {3, 4, 9};
+		System.out.println("1桁の数字を入力してください");
+		int input = new java.util.Scanner(System.in).nextInt();
+		for (int num: numbers) {
+			if (num == input) {
+				System.out.println("アタリ!");
+				break;
+			}
+		}
 	}
 
 }
