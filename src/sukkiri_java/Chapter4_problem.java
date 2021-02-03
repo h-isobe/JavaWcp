@@ -69,6 +69,22 @@ public class Chapter4_problem {
 		//System.out.println(array1[0]);
 
 
+        //コード 4-18 2次元配列の利用
+		int[][] scores5 = new int[2][3];  //2行3列の配列(あくまでイメージ)
+		scores5[0][0] = 40;
+		scores5[0][1] = 50;
+		scores5[0][2] = 60;
+		scores5[1][0] = 80;
+		scores5[1][1] = 60;
+		scores5[1][2] = 70;
+		System.out.println(scores5[1][1]);
+
+
+		//コード 4-19 親配列と子配列の要素数を表示
+		int[][] scores6 = {{40, 50, 60}, {80, 60, 70}};
+		System.out.println(scores6.length);     //2が出力
+		System.out.println(scores6[0].length);  //3が出力
+
 
 	}
 
