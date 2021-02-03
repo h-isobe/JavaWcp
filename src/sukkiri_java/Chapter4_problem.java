@@ -44,6 +44,32 @@ public class Chapter4_problem {
 		    //ランダム生成された0~3のseq[i]を配列baseの添字にして表示
 		    System.out.print(base[seq[i]] + " ");
 		}
+
+
+		//コード 4-14 拡張for文
+		System.out.println(" ");  //コード 4-12 のprint出力の続きとなるため改行
+		int[] scores4 = {20, 30, 40, 50, 80};
+		for (int value: scores4) {
+			System.out.println(value);
+		}
+
+
+		//コード 4-15 実行結果は？ (参照型)
+		int[] arrayA = {1, 2, 3};
+		int[] arrayB;
+		arrayB = arrayA;
+		arrayB[0] = 100;
+		System.out.println(arrayA[0]);
+
+
+		//コード 4-17  nullの利用 (エラー)
+		//int[] array1 = {1, 2, 3};
+		//array1 = null;
+		//array1[0] = 10;
+		//System.out.println(array1[0]);
+
+
+
 	}
 
 }
