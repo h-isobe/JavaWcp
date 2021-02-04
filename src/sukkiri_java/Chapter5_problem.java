@@ -37,6 +37,29 @@ public class Chapter5_problem {
     	System.out.println("10 + 20 = " + add5(10, 20));
     	System.out.println("10 + 20 + 30 = " + add5(10, 20, 30));
 
+    	//コード5-12 メソッドの呼び出し
+    	/*引数として配列(アドレス)を渡すことを参照渡し
+    	 *この場合、呼び出し先でarray[0]を100に更新すると、
+    	 *呼び出し元のint[] arrayの要素1も100に変わる。
+    	 */
+    	int[] array = {1, 2, 3};
+    	printArray(array);
+
+    	//コード5-13 メソッドの呼び出し
+    	int[] array2 = {1, 2, 3};
+    	incArray(array2);
+    	for (int i : array2) {
+    		//incArrayメソッドはreturnされていないが、
+    		//参照渡しで呼び出し元のarray2も更新されている。
+    		System.out.println(i);
+    	}
+
+    	//コード5-14 メソッドの呼び出し
+    	int[] array3 = makeArray(3);
+    	for (int i : array3) {
+    		System.out.println(i);
+    	}
+
     	System.out.println("メソッドの呼び出しが終わりました");
     }
 
@@ -110,5 +133,35 @@ public class Chapter5_problem {
     public static int add5(int x, int y, int z) {
     	return x + y + z;
     }
+
+
+    //コード5-12 引数に配列を受け取るメソッドの利用
+    public static void printArray(int[] array) {
+    	for (int element: array) {
+    		System.out.println(element);
+    	}
+    }
+
+
+    //コード5-13 同じ配列を参照していることを確認する
+    //int型配列を受け取り、
+    //配列内の要素全てに1を加えるメソッド
+    //void型で結果をreturnしていないが呼び出し元は、、、
+    public static void incArray(int[] array2) {
+    	for (int i = 0; i < array2.length; i++) {
+    		array2[i]++;
+    	}
+    }
+
+
+    //5-14 戻り値が配列の場合
+    public static int[] makeArray(int size) {
+    	int[] newArray = new int[size];
+    	for (int i = 0; i < newArray.length; i++) {
+    		newArray[i] = i;
+    	}
+    	return newArray;
+    }
+
 
 }
