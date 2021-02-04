@@ -21,6 +21,22 @@ public class Chapter5_problem {
     	add(100, 20);
     	add(200, 50);
 
+    	//コード5-7 メソッドの呼び出し
+    	int ans = add2(100, 10);
+    	System.out.println("100 + 10 = " + ans);
+
+    	//コード5-8 メソッドの呼び出し
+    	System.out.println(add3(add3(10, 20), add3(30, 40)));
+
+    	//コード5-10 メソッドの呼び出し
+    	System.out.println(add4(10, 20));
+    	System.out.println(add4(3.5, 2.7));
+    	System.out.println(add4("Hello", "World"));
+
+    	//コード5-11 メソッドの呼び出し
+    	System.out.println("10 + 20 = " + add5(10, 20));
+    	System.out.println("10 + 20 + 30 = " + add5(10, 20, 30));
+
     	System.out.println("メソッドの呼び出しが終わりました");
     }
 
@@ -42,7 +58,7 @@ public class Chapter5_problem {
     }
 
 
-    //コード5ー4 引数の例(渡す値が1つの場合)
+    //コード5-4 引数の例(渡す値が1つの場合)
     public static void hello2(String name) {
     	System.out.println(name + "さん、こんにちは");
     }
@@ -55,5 +71,44 @@ public class Chapter5_problem {
     }
 
 
+    //コード5-7 戻り値の例
+    public static int add2(int x, int y) {
+    	int ans = x + y;
+    	return ans;
+    }
+
+
+    //コード5-8 戻り値をそのまま使う
+    public static int add3(int x, int y) {
+    	int ans = x + y;
+    	return ans;
+    }
+
+
+    //コード5-10 オーバーロード(引数の型が異なる場合)
+    //1つ目のadd4メソッド
+    public static int add4(int x, int y) {
+        return x + y;
+    }
+    //2つ目のadd4メソッド
+    public static double add4(double x, double y) {
+    	return x + y;
+    }
+    //3つ目のadd4メソッド
+    public static String add4(String x, String y) {
+    	return x + y;
+    }
+
+
+    //コード5-11 オーバーロード(引数の数が異なる場合)
+    //1つ目のadd5メソッド
+    public static int add5(int x, int y) {
+    	return x + y;
+    }
+
+    //2つ目のadd5メソッド
+    public static int add5(int x, int y, int z) {
+    	return x + y + z;
+    }
 
 }
