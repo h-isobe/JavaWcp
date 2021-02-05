@@ -60,6 +60,27 @@ public class Chapter5_problem {
     		System.out.println(i);
     	}
 
+    	//練習問題 5-1
+    	introduceOneself();
+
+    	//練習問題 5-2
+    	String title = "お誘い";
+    	String address = "uso800@xxxx.com";
+    	String text = "今度、飲みにいきませんか";
+    	email(title, address, text);
+
+    	//練習問題 5-3(練習問題5-2のオーバーロード用に作成)
+//    	String address = "uso800@xxxx.com";
+//    	String text = "今度、飲みにいきませんか";
+//    	email(address, text);
+
+    	//練習問題 5-4
+    	double triangle = calcTriangleArea(10.0, 5.0);
+    	System.out.println("三角形の面積は、" + triangle + "㎠です");
+
+        double area = calcCircleArea(5.0);
+        System.out.println("円の面積は、" + area + "㎠です");
+
     	System.out.println("メソッドの呼び出しが終わりました");
     }
 
@@ -161,6 +182,46 @@ public class Chapter5_problem {
     		newArray[i] = i;
     	}
     	return newArray;
+    }
+
+
+    //練習問題 5-1
+    public static void introduceOneself() {
+    	String name = "湊";
+    	int age = 21;
+    	double height = 175.5;
+    	char eto = '申';
+    	System.out.println("私の名前は" + name + "です");
+    	System.out.println("年齢は" + age + "です");
+    	System.out.println("身長は" + height + "㎝です");
+    	System.out.println("十二支は" + eto + "です");
+    }
+
+
+    //練習問題 5-2
+    public static void email(String title, String address, String text) {
+    	System.out.println(address + "に、以下のメールを送信しました");
+    	System.out.println("件名：" + title);
+    	System.out.println("本文：" + text);
+    }
+
+
+    //練習問題 5-3
+    public static void email(String address, String text) {
+    	System.out.println(address + "に、以下のメールを送信しました");
+    	System.out.println("件名：無題");
+    	System.out.println("本文：" + text);
+    }
+
+
+    //練習問題 5-4
+    public static double calcTriangleArea(double bottom, double height) {
+    	double triangle =  (bottom * height) / 2;
+    	return triangle;
+    }
+    public static double calcCircleArea(double radius) {
+    	double area = radius * radius * 3.14;
+    	return area;
     }
 
 
